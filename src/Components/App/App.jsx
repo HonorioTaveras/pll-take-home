@@ -6,16 +6,26 @@ import './App.scss';
 const App = () => {
   const [err, setErr] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [playerOneInfo, setPlayerOneInfo] = useState({});
+  const [playerTwoInfo, setPlayerTwoInfo] = useState({});
+  const [playerOneStats, setPlayerOneStats] = useState({});
+  const [playerTwoStats, setPlayerTwoStats] = useState({});
 
-  const getPlayerOneInfo = () => {
+  const playerOneId = '000354';
+  const playerTwoId = '000391';
+  const infoEndpoint = 'players';
+  const statsEndpoint = 'players-stats';
+
+  const getPlayerInfoAndStats = (endpoint, playerId, setState) => {
     axios
       .get(
-        'https://api.stats.premierlacrosseleague.com/v1.00/players/000354/2020'
+        `https://api.stats.premierlacrosseleague.com/v1.00/${endpoint}/${playerId}/2020`
       )
       .then(
         (res) => {
           setIsLoaded(true);
-          console.log('player 1 info: ', res.data);
+          setState(res.data);
+          console.log('data: ', res.data);
         },
         (err) => {
           setIsLoaded(true);
@@ -24,26 +34,11 @@ const App = () => {
       );
   };
 
-  const getPlayerTwoInfo = () => {
-    axios
-    .get(
-      'https://api.stats.premierlacrosseleague.com/v1.00/players/000391/2020'
-    )
-    .then(
-      (res) => {
-        setIsLoaded(true);
-        console.log('player 2 info: ', res.data);
-      },
-      (err) => {
-        setIsLoaded(true);
-        setErr(err);
-      }
-    );
-  }
-
   useEffect(() => {
-    getPlayerOneInfo();
-    getPlayerTwoInfo();
+    getPlayerInfoAndStats(infoEndpoint, playerOneId, setPlayerOneInfo);
+    getPlayerInfoAndStats(infoEndpoint, playerTwoId, setPlayerTwoInfo);
+    getPlayerInfoAndStats(statsEndpoint, playerOneId, setPlayerOneStats);
+    getPlayerInfoAndStats(statsEndpoint, playerTwoId, setPlayerTwoStats);
   }, []);
 
   return <div className='App'>Sup dirtbag.</div>;
