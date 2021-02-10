@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+import Spinner from '../Spinner/Spinner';
 import PlayerInfo from '../PlayerInfo/PlayerInfo';
 
 import './App.scss';
@@ -43,6 +44,17 @@ const App = () => {
     getPlayerInfoAndStats(statsEndpoint, playerTwoId, setPlayerTwoStats);
   }, []);
 
+  if (err) {
+    return (
+      <div>
+        Error:
+        {err.message}
+      </div>
+    );
+  }
+  if (!isLoaded) {
+    return <Spinner />;
+  }
   return (
     <div>
       <PlayerInfo />
