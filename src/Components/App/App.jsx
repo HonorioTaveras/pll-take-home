@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+import PlayerInfo from '../PlayerInfo/PlayerInfo';
+
 import './App.scss';
 
 const App = () => {
@@ -41,7 +43,11 @@ const App = () => {
     getPlayerInfoAndStats(statsEndpoint, playerTwoId, setPlayerTwoStats);
   }, []);
 
-  return <div className='App'>Sup dirtbag.</div>;
+  return (
+    <div>
+      <PlayerInfo />
+    </div>
+  );
 };
 
 export default App;
