@@ -21,9 +21,79 @@ const PlayerStats = ({
     numPenalties,
     PIM,
   },
-}) => {
-  console.log('playerStats from playerStats component: ', PlayerStats);
-  return <div>Sup from PlayerStats component!</div>;
-};
+}) => (
+  <div className='player-stats-container'>
+    <div className='row-1'>
+      <div className='row-1-col'>
+        <div className='title'></div>
+        <div className='content'></div>
+      </div>
+      <div className='row-1-col'>
+        <div className='title'></div>
+        <div className='content'></div>
+      </div>
+      <div className='row-1-col'>
+        <div className='title'></div>
+        <div className='content'></div>
+      </div>
+      <div className='row-1-col'>
+        <div className='title'></div>
+        <div className='content'></div>
+      </div>
+      <div className='row-1-col'>
+        <div className='title'></div>
+        <div className='content'></div>
+      </div>
+    </div>
+    <div className='row-2'>
+      <div className='row-2-col'>
+        <div className='title'></div>
+        <div className='content'></div>
+      </div>
+      <div className='row-2-col'>
+        <div className='title'></div>
+        <div className='content'></div>
+      </div>
+      <div className='row-2-col'>
+        <div className='title'></div>
+        <div className='content'></div>
+      </div>
+      <div className='row-2-col'>
+        <div className='title'></div>
+        <div className='content'></div>
+      </div>
+      <div className='row-2-col'>
+        <div className='title'></div>
+        <div className='content'></div>
+      </div>
+      <div className='row-2-col'>
+        <div className='title'></div>
+        <div className='content'></div>
+      </div>
+      <div className='row-2-col'>
+        <div className='title'></div>
+        <div className='content'></div>
+      </div>
+    </div>
+    <div className='row-3'>
+      <div className='row-3-col'>
+        <div className='title'></div>
+        <div className='content'></div>
+      </div>
+      <div className='row-3-col'>
+        <div className='title'></div>
+        <div className='content'></div>
+      </div>
+      <div className='row-3-col'>
+        <div className='title'></div>
+        <div className='content'></div>
+      </div>
+      <div className='row-3-col'>
+        <div className='title'></div>
+        <div className='content'></div>
+      </div>
+    </div>
+  </div>
+);
 
 export default PlayerStats;
