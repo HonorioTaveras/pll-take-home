@@ -22,9 +22,9 @@ const PlayerInfo = ({
   return (
     <div className='player-info-container'>
       <div className='row-1'>
-        <h2 className='play-name'>
+        <div className='player-name'>
           {firstName} {lastName}
-        </h2>
+        </div>
         <div className='player-image'>
           <img src={profileUrl} alt={`${firstName} ${lastName}`} />
         </div>
