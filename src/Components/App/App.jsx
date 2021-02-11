@@ -28,7 +28,7 @@ const App = () => {
         (res) => {
           setIsLoaded(true);
           setState(res.data);
-          console.log('data: ', res.data);
+          // console.log('data: ', res.data);
         },
         (err) => {
           setIsLoaded(true);
@@ -57,7 +57,7 @@ const App = () => {
   }
   return (
     <div>
-      <PlayerInfo />
+      <PlayerInfo playerInfo={playerOneInfo} />
     </div>
   );
 };
