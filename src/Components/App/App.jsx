@@ -59,9 +59,9 @@ const App = () => {
   return (
     <div>
       <PlayerInfo playerInfo={playerOneInfo} />
-      <PlayerStats playerStats={playerOneStats} />
+      <PlayerStats PlayerStats={playerOneStats} />
       <PlayerInfo playerInfo={playerTwoInfo} />
-      <PlayerStats playerStats={playerTwoStats} />
+      <PlayerStats PlayerStats={playerTwoStats} />
     </div>
   );
 };

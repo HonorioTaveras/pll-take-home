@@ -1,5 +1,10 @@
 .player-info-container {
+  display: grid;
+  grid-template-rows: auto;
   .row-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .player-name {
     }
     .player-image {
@@ -12,17 +17,19 @@
     }
   }
   .row-2 {
-    .height {
-    }
-    .weight {
-    }
-    .college {
-    }
-    .hometown {
-    }
-    .highSchool {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    .row-2-col {
+      .title {
+      }
+      .content {
+      }
     }
   }
   .player-bio {
+    .title {
+    }
+    .content {
+    }
   }
 }

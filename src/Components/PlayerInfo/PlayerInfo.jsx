@@ -34,25 +34,25 @@ const PlayerInfo = ({
         </div>
       </div>
       <div className='row-2'>
-        <div className='height-container'>
-          <p className='title'>Height</p>
-          <p className='content'>{height}</p>
+        <div className='row-2-col'>
+          <div className='title'>Height</div>
+          <div className='content'>{height}</div>
         </div>
-        <div className='weight-container'>
-          <p className='title'>Weight</p>
-          <p className='content'>{weight}</p>
+        <div className='row-2-col'>
+          <div className='title'>Weight</div>
+          <div className='content'>{weight}</div>
         </div>
-        <div className='college-container'>
-          <p className='title'>College</p>
-          <p className='content'>{college}</p>
+        <div className='row-2-col'>
+          <div className='title'>College</div>
+          <div className='content'>{college}</div>
         </div>
-        <div className='hometown-container'>
-          <p className='title'>Hometown</p>
-          <p className='content'>{hometown}</p>
+        <div className='row-2-col'>
+          <div className='title'>Hometown</div>
+          <div className='content'>{hometown}</div>
         </div>
-        <div className='highSchool-container'>
-          <p className='title'>High School</p>
-          <p className='content'>{highSchool}</p>
+        <div className='row-2-col'>
+          <div className='title'>High School</div>
+          <div className='content'>{highSchool}</div>
         </div>
       </div>
       <div className='player-bio'>
