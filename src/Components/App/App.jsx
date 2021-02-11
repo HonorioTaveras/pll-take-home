@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import Spinner from '../Spinner/Spinner';
 import PlayerInfo from '../PlayerInfo/PlayerInfo';
+import PlayerStats from '../PlayerStats/PlayerStats';
 
 import './App.scss';
 
@@ -58,6 +59,9 @@ const App = () => {
   return (
     <div>
       <PlayerInfo playerInfo={playerOneInfo} />
+      <PlayerStats playerStats={playerOneStats} />
+      <PlayerInfo playerInfo={playerTwoInfo} />
+      <PlayerStats playerStats={playerTwoStats} />
     </div>
   );
 };

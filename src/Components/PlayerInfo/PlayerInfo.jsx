@@ -18,7 +18,7 @@ const PlayerInfo = ({
   },
   playerInfo,
 }) => {
-  console.log('playerInfo from PlayerInfo component: ', playerInfo);
+  // console.log('playerInfo from PlayerInfo component: ', playerInfo);
   return (
     <div className='player-info-container'>
       <div className='row-1'>
@@ -34,13 +34,31 @@ const PlayerInfo = ({
         </div>
       </div>
       <div className='row-2'>
-        <div className='height'>{height}</div>
-        <div className='weight'>{weight}</div>
-        <div className='college'>{college}</div>
-        <div className='hometown'>{hometown}</div>
-        <div className='highSchool'>{highSchool}</div>
+        <div className='height-container'>
+          <p className='title'>Height</p>
+          <p className='content'>{height}</p>
+        </div>
+        <div className='weight-container'>
+          <p className='title'>Weight</p>
+          <p className='content'>{weight}</p>
+        </div>
+        <div className='college-container'>
+          <p className='title'>College</p>
+          <p className='content'>{college}</p>
+        </div>
+        <div className='hometown-container'>
+          <p className='title'>Hometown</p>
+          <p className='content'>{hometown}</p>
+        </div>
+        <div className='highSchool-container'>
+          <p className='title'>High School</p>
+          <p className='content'>{highSchool}</p>
+        </div>
       </div>
-      <div className='player-bio'>{playerBio}</div>
+      <div className='player-bio'>
+        <p className='title'>PlayerBio: </p>
+        <p className='content'>{playerBio}</p>
+      </div>
     </div>
   );
 };
