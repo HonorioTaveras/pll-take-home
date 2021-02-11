@@ -52,7 +52,7 @@ const PlayerStats = ({
       </div>
       <div className='row-2-col'>
         <div className='title'>Shot %</div>
-        <div className='content'>{shotPct}</div>
+        <div className='content'>{Math.round(shotPct * 100)}</div>
       </div>
       <div className='row-2-col'>
         <div className='title'>SOG</div>
@@ -60,7 +60,7 @@ const PlayerStats = ({
       </div>
       <div className='row-2-col'>
         <div className='title'>SOG %</div>
-        <div className='content'>{shotsOnGoalPct}</div>
+        <div className='content'>{Math.round(shotsOnGoalPct * 100)}</div>
       </div>
       <div className='row-2-col'>
         <div className='title'>2 PT Sh</div>
@@ -72,7 +72,7 @@ const PlayerStats = ({
       </div>
       <div className='row-2-col'>
         <div className='title'>2 Pt SOG %</div>
-        <div className='content'>{twoPointShotsOnGoalPct}</div>
+        <div className='content'>{Math.round(twoPointShotsOnGoalPct * 100)}</div>
       </div>
     </div>
     <div className='row-3'>
