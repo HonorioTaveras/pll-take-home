@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+import getPlayerInfoAndStats from './routes';
+
 import Spinner from '../Spinner/Spinner';
 import PlayerInfo from '../PlayerInfo/PlayerInfo';
 import PlayerStats from '../PlayerStats/PlayerStats';
@@ -20,29 +22,35 @@ const App = () => {
   const infoEndpoint = 'players';
   const statsEndpoint = 'players-stats';
 
-  const getPlayerInfoAndStats = (endpoint, playerId, setState) => {
-    axios
-      .get(
-        `https://api.stats.premierlacrosseleague.com/v1.00/${endpoint}/${playerId}/2020`
-      )
-      .then(
-        (res) => {
-          setIsLoaded(true);
-          setState(res.data);
-          // console.log('data: ', res.data);
-        },
-        (err) => {
-          setIsLoaded(true);
-          setErr(err);
-        }
-      );
-  };
-
   useEffect(() => {
-    getPlayerInfoAndStats(infoEndpoint, playerOneId, setPlayerOneInfo);
-    getPlayerInfoAndStats(infoEndpoint, playerTwoId, setPlayerTwoInfo);
-    getPlayerInfoAndStats(statsEndpoint, playerOneId, setPlayerOneStats);
-    getPlayerInfoAndStats(statsEndpoint, playerTwoId, setPlayerTwoStats);
+    getPlayerInfoAndStats(
+      infoEndpoint,
+      playerOneId,
+      setPlayerOneInfo,
+      setIsLoaded,
+      setErr
+    );
+    getPlayerInfoAndStats(
+      infoEndpoint,
+      playerTwoId,
+      setPlayerTwoInfo,
+      setIsLoaded,
+      setErr
+    );
+    getPlayerInfoAndStats(
+      statsEndpoint,
+      playerOneId,
+      setPlayerOneStats,
+      setIsLoaded,
+      setErr
+    );
+    getPlayerInfoAndStats(
+      statsEndpoint,
+      playerTwoId,
+      setPlayerTwoStats,
+      setIsLoaded,
+      setErr
+    );
   }, []);
 
   if (err) {
