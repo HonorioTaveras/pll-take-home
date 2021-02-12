@@ -46,7 +46,7 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     .row-2-col {
-      background-color: #303231;
+      background-color: #1C1D1C;
       padding: 3%;
       .title {
         font-weight: 700;
@@ -61,7 +61,7 @@
   .player-bio {
     display: flex;
     flex-direction: column;
-    background-color: #303231;
+    background-color: #1C1D1C;
     padding: 1%;
     .title {
       align-self: center;
