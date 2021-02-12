@@ -60,6 +60,7 @@ const App = () => {
     <div className='app-container'>
       <PlayerInfo playerInfo={playerOneInfo} />
       <PlayerStats PlayerStats={playerOneStats} />
+      <div className='player-divider' />
       <PlayerInfo playerInfo={playerTwoInfo} />
       <PlayerStats PlayerStats={playerTwoStats} />
     </div>

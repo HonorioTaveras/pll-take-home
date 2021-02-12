@@ -1,3 +1,10 @@
 .app-container {
   margin: 0 10%;
+  @media (max-width: 768px) {
+    margin: 0;
+  }
+  .player-divider {
+    border-bottom: 10px double #a6e22e;
+    margin-bottom: 5rem;
+  }
 }
