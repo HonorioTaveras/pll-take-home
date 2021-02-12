@@ -89,6 +89,9 @@
     text-align: center;
     background-color: #1c1d1c;
     padding: 1%;
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
     .title {
       font-weight: 700;
       font-size: 21px;
