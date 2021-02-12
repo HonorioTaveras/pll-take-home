@@ -1,4 +1,6 @@
 .player-stats-container {
+  display: grid;
+  grid-template-rows: auto;
   .title {
     color: #03a9f4;
     font-weight: 700;
@@ -16,6 +18,10 @@
     .row-1-col {
       text-align: center;
     }
+    @media (max-width: 768px) {
+      row-gap: 0.563rem;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
   .row-2 {
     display: grid;
@@ -24,6 +30,14 @@
     padding: 1.5%;
     .row-2-col {
       text-align: center;
+    }
+    @media (max-width: 992px) {
+      row-gap: 0.563rem;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    @media (max-width: 768px) {
+      row-gap: 0.563rem;
+      grid-template-columns: 1fr 1fr 1fr;
     }
   }
   .row-3 {
