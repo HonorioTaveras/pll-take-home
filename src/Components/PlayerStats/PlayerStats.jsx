@@ -23,9 +23,10 @@ const PlayerStats = ({
   },
 }) => {
   const handlePercents = (value) =>
-    value > 0 ? `${Math.round(value * 100)}%` : 0;
+    value > 0 ? `${Math.round(value * 100)} %` : 0;
   return (
     <div className='player-stats-container'>
+      <div className='row-divider' />
       <div className='row-1'>
         <div className='row-1-col'>
           <div className='title'>Points</div>
@@ -48,6 +49,8 @@ const PlayerStats = ({
           <div className='content'>{turnovers}</div>
         </div>
       </div>
+      <div className='row-divider row-bottom' />
+      <div className='row-divider' />
       <div className='row-2'>
         <div className='row-2-col'>
           <div className='title'>Shots</div>
@@ -80,6 +83,8 @@ const PlayerStats = ({
           </div>
         </div>
       </div>
+      <div className='row-divider row-bottom' />
+      <div className='row-divider' />
       <div className='row-3'>
         <div className='row-3-col'>
           <div className='title'>GB</div>
@@ -98,6 +103,7 @@ const PlayerStats = ({
           <div className='content'>{PIM}</div>
         </div>
       </div>
+      <div className='row-divider row-bottom' />
     </div>
   );
 };

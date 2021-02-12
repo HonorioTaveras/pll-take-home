@@ -58,7 +58,7 @@ const PlayerInfo = ({
     <div className='row-divider row-bottom' />
     <div className='row-divider' />
     <div className='player-bio'>
-      <p className='title header'>PlayerBio</p>
+      <p className='title header'>Player Bio</p>
       <p className='content'>{playerBio}</p>
     </div>
     <div className='row-divider row-bottom' />

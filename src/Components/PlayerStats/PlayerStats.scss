@@ -1,32 +1,45 @@
 .player-stats-container {
+  .title {
+    color: #03a9f4;
+    font-weight: 700;
+    font-size: 21px;
+    padding: 3%;
+  }
+  .content {
+    padding: 1%;
+  }
   .row-1 {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    background-color: #1c1d1c;
+    padding: 1.5%;
     .row-1-col {
-      .title {
-      }
-      .content {
-      }
+      text-align: center;
     }
   }
   .row-2 {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+    background-color: #1c1d1c;
+    padding: 1.5%;
     .row-2-col {
-      .title {
-      }
-      .content {
-      }
+      text-align: center;
     }
   }
   .row-3 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    background-color: #1c1d1c;
+    padding: 1.5%;
     .row-3-col {
-      .title {
-      }
-      .content {
-      }
+      text-align: center;
     }
+  }
+  .row-divider {
+    border-top: 1px solid #fc929e;
+    margin: 10px 0;
+  }
+  .row-bottom {
+    margin-bottom: 15px;
   }
 }
