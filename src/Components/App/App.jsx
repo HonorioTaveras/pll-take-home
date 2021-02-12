@@ -57,7 +57,7 @@ const App = () => {
     return <Spinner />;
   }
   return (
-    <div>
+    <div className='app-container'>
       <PlayerInfo playerInfo={playerOneInfo} />
       <PlayerStats PlayerStats={playerOneStats} />
       <PlayerInfo playerInfo={playerTwoInfo} />
