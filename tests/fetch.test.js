@@ -1,7 +1,29 @@
+import axios from 'axios';
+
 import getPlayerInfoAndStats from '../src/Components/App/routes';
 
-describe('getPlayerInfoAndStats', () => {
-  it('fetches successfully data from the Premier Lacrosse League API', async () => {});
+jest.mock('axios');
 
-  it('fetches erroneously data from the Premier Lacrosse League API', async () => {});
+describe('get player one info', () => {
+  it('fetches successfully player one info data from the PLL API', async () => {});
+
+  it('fetches erroneously player one info data from from the PLL API API', async () => {});
+});
+
+describe('get player one stats', () => {
+  it('fetches successfully player one stats data from the PLL API', async () => {});
+
+  it('fetches erroneously player one stats data from from the PLL API API', async () => {});
+});
+
+describe('get player two info', () => {
+  it('fetches successfully player two info data from the PLL API', async () => {});
+
+  it('fetches erroneously player two info data from from the PLL API API', async () => {});
+});
+
+describe('get player two stats', () => {
+  it('fetches successfully player two stats data from the PLL API', async () => {});
+
+  it('fetches erroneously player two stats data from from the PLL API API', async () => {});
 });

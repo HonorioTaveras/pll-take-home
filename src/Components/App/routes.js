@@ -9,6 +9,7 @@ const getPlayerInfoAndStats = (endpoint, playerId, setState, setLoaded, setError
       (res) => {
         setLoaded(true);
         setState(res.data);
+        console.log('DATA: ', res.data);
       },
       (err) => {
         setLoaded(true);
