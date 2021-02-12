@@ -35,21 +35,45 @@
       }
     }
   }
+  .row-divider {
+    border-top: 1px solid #fc929e;
+    margin: 10px 0;
+  }
+  .row-bottom {
+    margin-bottom: 15px;
+  }
   .row-2 {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    border-top: 1px solid #fc929e;
     .row-2-col {
+      background-color: #303231;
+      padding: 3%;
       .title {
+        font-weight: 700;
+        font-size: 21px;
+        padding: 3%;
       }
       .content {
+        padding: 3%;
       }
     }
   }
   .player-bio {
+    display: flex;
+    flex-direction: column;
+    background-color: #303231;
+    padding: 1%;
     .title {
+      align-self: center;
+      font-weight: 700;
+      font-size: 21px;
+      padding-bottom: 10px;
     }
     .content {
+      text-align: center;
+      padding: 0 10px;
+      letter-spacing: 1px;
+      line-height: 1.29;
     }
   }
 }

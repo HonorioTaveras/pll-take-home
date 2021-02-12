@@ -32,6 +32,7 @@ const PlayerInfo = ({
         <span className='jersey-and-position header'>{position}</span>
       </div>
     </div>
+    <div className='row-divider' />
     <div className='row-2'>
       <div className='row-2-col'>
         <div className='title header'>Height</div>
@@ -54,10 +55,13 @@ const PlayerInfo = ({
         <div className='content'>{highSchool}</div>
       </div>
     </div>
+    <div className='row-divider row-bottom' />
+    <div className='row-divider' />
     <div className='player-bio'>
       <p className='title header'>PlayerBio</p>
       <p className='content'>{playerBio}</p>
     </div>
+    <div className='row-divider row-bottom' />
   </div>
 );
 
