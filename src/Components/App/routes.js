@@ -15,7 +15,7 @@ export const getPlayerOneInfo = async () => {
 
 export const getPlayerOneStats = async () => {
   const data = await axios.get(
-    `https://api.stats.premierlacrosseleague.com/v1.00/${infoEndpoint}/${playerOneId}/2020`
+    `https://api.stats.premierlacrosseleague.com/v1.00/${statsEndpoint}/${playerOneId}/2020`
   );
 
   return data;

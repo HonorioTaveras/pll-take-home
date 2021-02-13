@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { getPlayerOneInfo } from './routes';
+import { getPlayerOneInfo, getPlayerOneStats } from './routes';
 
 import Spinner from '../Spinner/Spinner';
 import PlayerInfo from '../PlayerInfo/PlayerInfo';
@@ -28,17 +28,17 @@ const App = () => {
         setErr(err);
       }
     );
-    // getPlayerInfoAndStats(statsEndpoint, playerOneId).then(
-    //   (res) => {
-    //     setIsLoaded(true);
-    //     setPlayerOneInfo(res.data);
-    //     console.log('DATA2: ', res.data);
-    //   },
-    //   (err) => {
-    //     setIsLoaded(true);
-    //     setErr(err);
-    //   }
-    // );
+    getPlayerOneStats().then(
+      (res) => {
+        setIsLoaded(true);
+        setPlayerOneStats(res.data);
+        console.log('DATA2: ', res.data);
+      },
+      (err) => {
+        setIsLoaded(true);
+        setErr(err);
+      }
+    );
     // getPlayerInfoAndStats(infoEndpoint, playerTwoId).then(
     //   (res) => {
     //     setIsLoaded(true);
