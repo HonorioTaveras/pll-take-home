@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 
-import getPlayerInfoAndStats from './routes';
+import { getPlayerOneInfo } from './routes';
 
 import Spinner from '../Spinner/Spinner';
 import PlayerInfo from '../PlayerInfo/PlayerInfo';
@@ -17,40 +16,79 @@ const App = () => {
   const [playerOneStats, setPlayerOneStats] = useState({});
   const [playerTwoStats, setPlayerTwoStats] = useState({});
 
-  const playerOneId = '000354';
-  const playerTwoId = '000391';
-  const infoEndpoint = 'players';
-  const statsEndpoint = 'players-stats';
-
   useEffect(() => {
-    getPlayerInfoAndStats(
-      infoEndpoint,
-      playerOneId,
-      setPlayerOneInfo,
-      setIsLoaded,
-      setErr
+    getPlayerOneInfo().then(
+      (res) => {
+        setIsLoaded(true);
+        setPlayerOneInfo(res.data);
+        console.log('DATA1: ', res.data);
+      },
+      (err) => {
+        setIsLoaded(true);
+        setErr(err);
+      }
     );
-    getPlayerInfoAndStats(
-      infoEndpoint,
-      playerTwoId,
-      setPlayerTwoInfo,
-      setIsLoaded,
-      setErr
-    );
-    getPlayerInfoAndStats(
-      statsEndpoint,
-      playerOneId,
-      setPlayerOneStats,
-      setIsLoaded,
-      setErr
-    );
-    getPlayerInfoAndStats(
-      statsEndpoint,
-      playerTwoId,
-      setPlayerTwoStats,
-      setIsLoaded,
-      setErr
-    );
+    // getPlayerInfoAndStats(statsEndpoint, playerOneId).then(
+    //   (res) => {
+    //     setIsLoaded(true);
+    //     setPlayerOneInfo(res.data);
+    //     console.log('DATA2: ', res.data);
+    //   },
+    //   (err) => {
+    //     setIsLoaded(true);
+    //     setErr(err);
+    //   }
+    // );
+    // getPlayerInfoAndStats(infoEndpoint, playerTwoId).then(
+    //   (res) => {
+    //     setIsLoaded(true);
+    //     setPlayerOneInfo(res.data);
+    //     console.log('DATA3: ', res.data);
+    //   },
+    //   (err) => {
+    //     setIsLoaded(true);
+    //     setErr(err);
+    //   }
+    // );
+    // getPlayerInfoAndStats(statsEndpoint, playerTwoId).then(
+    //   (res) => {
+    //     setIsLoaded(true);
+    //     setPlayerOneInfo(res.data);
+    //     console.log('DATA4: ', res.data);
+    //   },
+    //   (err) => {
+    //     setIsLoaded(true);
+    //     setErr(err);
+    //   }
+    // );
+    // getPlayerInfoAndStats(
+    //   infoEndpoint,
+    //   playerOneId,
+    //   setPlayerOneInfo,
+    //   setIsLoaded,
+    //   setErr
+    // );
+    // getPlayerInfoAndStats(
+    //   infoEndpoint,
+    //   playerTwoId,
+    //   setPlayerTwoInfo,
+    //   setIsLoaded,
+    //   setErr
+    // );
+    // getPlayerInfoAndStats(
+    //   statsEndpoint,
+    //   playerOneId,
+    //   setPlayerOneStats,
+    //   setIsLoaded,
+    //   setErr
+    // );
+    // getPlayerInfoAndStats(
+    //   statsEndpoint,
+    //   playerTwoId,
+    //   setPlayerTwoStats,
+    //   setIsLoaded,
+    //   setErr
+    // );
   }, []);
 
   if (err) {

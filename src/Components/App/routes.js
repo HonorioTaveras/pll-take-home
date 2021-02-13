@@ -1,21 +1,22 @@
 import axios from 'axios';
 
-const getPlayerInfoAndStats = (endpoint, playerId, setState, setLoaded, setError) => {
-  axios
-    .get(
-      `https://api.stats.premierlacrosseleague.com/v1.00/${endpoint}/${playerId}/2020`
-    )
-    .then(
-      (res) => {
-        setLoaded(true);
-        setState(res.data);
-        console.log('DATA: ', res.data);
-      },
-      (err) => {
-        setLoaded(true);
-        setError(err);
-      }
-    );
+const playerOneId = '000354';
+const playerTwoId = '000391';
+const infoEndpoint = 'players';
+const statsEndpoint = 'players-stats';
+
+export const getPlayerOneInfo = async () => {
+  const data = await axios.get(
+    `https://api.stats.premierlacrosseleague.com/v1.00/${infoEndpoint}/${playerOneId}/2020`
+  );
+
+  return data;
 };
 
-export default getPlayerInfoAndStats;
+export const getPlayerOneStats = async () => {
+  const data = await axios.get(
+    `https://api.stats.premierlacrosseleague.com/v1.00/${infoEndpoint}/${playerOneId}/2020`
+  );
+
+  return data;
+};
