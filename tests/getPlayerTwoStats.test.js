@@ -8,7 +8,7 @@ const statsEndpoint = 'players-stats';
 jest.mock('axios');
 
 describe('get player one stats', () => {
-  it('fetches successfully player one stats data from the PLL API', async () => {
+  it('fetches successfully player two stats data from the PLL API', async () => {
     const data = {
       GAA: 0,
       PIM: 0,
@@ -68,7 +68,7 @@ describe('get player one stats', () => {
     );
   });
 
-  it('fetches erroneously player one info data from from the PLL API API', async () => {
+  it('fetches erroneously player two stats data from from the PLL API API', async () => {
     const errorMessage = 'Network Error';
 
     axios.get.mockImplementationOnce(() =>

@@ -68,7 +68,7 @@ describe('get player one stats', () => {
     );
   });
 
-  it('fetches erroneously player one info data from from the PLL API API', async () => {
+  it('fetches erroneously player one stats data from from the PLL API API', async () => {
     const errorMessage = 'Network Error';
 
     axios.get.mockImplementationOnce(() =>
