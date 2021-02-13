@@ -26,7 +26,6 @@ const App = () => {
       (res) => {
         setIsLoaded(true);
         setPlayerOneInfo(res.data);
-        console.log('DATA1: ', res.data);
       },
       (err) => {
         setIsLoaded(true);
@@ -37,7 +36,6 @@ const App = () => {
       (res) => {
         setIsLoaded(true);
         setPlayerOneStats(res.data);
-        console.log('DATA2: ', res.data);
       },
       (err) => {
         setIsLoaded(true);
@@ -48,7 +46,6 @@ const App = () => {
       (res) => {
         setIsLoaded(true);
         setPlayerTwoInfo(res.data);
-        console.log('DATA3: ', res.data);
       },
       (err) => {
         setIsLoaded(true);
@@ -59,7 +56,6 @@ const App = () => {
       (res) => {
         setIsLoaded(true);
         setPlayerTwoStats(res.data);
-        console.log('DATA4: ', res.data);
       },
       (err) => {
         setIsLoaded(true);
