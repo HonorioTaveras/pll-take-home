@@ -22,47 +22,71 @@ const App = () => {
   const [playerTwoStats, setPlayerTwoStats] = useState({});
 
   useEffect(() => {
-    getPlayerOneInfo().then(
-      (res) => {
-        setIsLoaded(true);
-        setPlayerOneInfo(res.data);
-      },
-      (err) => {
-        setIsLoaded(true);
+    const fetchPlayerOneInfo = async () => {
+      setIsLoaded(true);
+      setErr(err);
+
+      try {
+        const result = await getPlayerOneInfo();
+
+        setPlayerOneInfo(result.data);
+      } catch (err) {
         setErr(err);
       }
-    );
-    getPlayerOneStats().then(
-      (res) => {
-        setIsLoaded(true);
-        setPlayerOneStats(res.data);
-      },
-      (err) => {
-        setIsLoaded(true);
+
+      setIsLoaded(true);
+    };
+
+    const fetchPlayerOneStats = async () => {
+      setIsLoaded(true);
+      setErr(err);
+
+      try {
+        const result = await getPlayerOneStats();
+
+        setPlayerOneStats(result.data);
+      } catch (err) {
         setErr(err);
       }
-    );
-    getPlayerTwoInfo().then(
-      (res) => {
-        setIsLoaded(true);
-        setPlayerTwoInfo(res.data);
-      },
-      (err) => {
-        setIsLoaded(true);
+
+      setIsLoaded(true);
+    };
+
+    const fetchPlayerTwoInfo = async () => {
+      setIsLoaded(true);
+      setErr(err);
+
+      try {
+        const result = await getPlayerTwoInfo();
+
+        setPlayerTwoInfo(result.data);
+      } catch (err) {
         setErr(err);
       }
-    );
-    getPlayerTwoStats().then(
-      (res) => {
-        setIsLoaded(true);
-        setPlayerTwoStats(res.data);
-      },
-      (err) => {
-        setIsLoaded(true);
+
+      setIsLoaded(true);
+    };
+
+    const fetchPlayerTwoStats = async () => {
+      setIsLoaded(true);
+      setErr(err);
+
+      try {
+        const result = await getPlayerTwoStats();
+
+        setPlayerTwoStats(result.data);
+      } catch (err) {
         setErr(err);
       }
-    );
-  }, []);
+
+      setIsLoaded(true);
+    };
+
+    fetchPlayerOneInfo();
+    fetchPlayerOneStats();
+    fetchPlayerTwoInfo();
+    fetchPlayerTwoStats();
+  }, [err]);
 
   if (err) {
     return (
