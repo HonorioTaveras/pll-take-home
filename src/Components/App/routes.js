@@ -20,3 +20,19 @@ export const getPlayerOneStats = async () => {
 
   return data;
 };
+
+export const getPlayerTwoInfo = async () => {
+  const data = await axios.get(
+    `https://api.stats.premierlacrosseleague.com/v1.00/${infoEndpoint}/${playerTwoId}/2020`
+  );
+
+  return data;
+};
+
+export const getPlayerTwoStats = async () => {
+  const data = await axios.get(
+    `https://api.stats.premierlacrosseleague.com/v1.00/${statsEndpoint}/${playerTwoId}/2020`
+  );
+
+  return data;
+};

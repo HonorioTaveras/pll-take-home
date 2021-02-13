@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
-import { getPlayerOneInfo, getPlayerOneStats } from './routes';
+import {
+  getPlayerOneInfo,
+  getPlayerOneStats,
+  getPlayerTwoInfo,
+  getPlayerTwoStats,
+} from './routes';
 
 import Spinner from '../Spinner/Spinner';
 import PlayerInfo from '../PlayerInfo/PlayerInfo';
@@ -39,56 +44,28 @@ const App = () => {
         setErr(err);
       }
     );
-    // getPlayerInfoAndStats(infoEndpoint, playerTwoId).then(
-    //   (res) => {
-    //     setIsLoaded(true);
-    //     setPlayerOneInfo(res.data);
-    //     console.log('DATA3: ', res.data);
-    //   },
-    //   (err) => {
-    //     setIsLoaded(true);
-    //     setErr(err);
-    //   }
-    // );
-    // getPlayerInfoAndStats(statsEndpoint, playerTwoId).then(
-    //   (res) => {
-    //     setIsLoaded(true);
-    //     setPlayerOneInfo(res.data);
-    //     console.log('DATA4: ', res.data);
-    //   },
-    //   (err) => {
-    //     setIsLoaded(true);
-    //     setErr(err);
-    //   }
-    // );
-    // getPlayerInfoAndStats(
-    //   infoEndpoint,
-    //   playerOneId,
-    //   setPlayerOneInfo,
-    //   setIsLoaded,
-    //   setErr
-    // );
-    // getPlayerInfoAndStats(
-    //   infoEndpoint,
-    //   playerTwoId,
-    //   setPlayerTwoInfo,
-    //   setIsLoaded,
-    //   setErr
-    // );
-    // getPlayerInfoAndStats(
-    //   statsEndpoint,
-    //   playerOneId,
-    //   setPlayerOneStats,
-    //   setIsLoaded,
-    //   setErr
-    // );
-    // getPlayerInfoAndStats(
-    //   statsEndpoint,
-    //   playerTwoId,
-    //   setPlayerTwoStats,
-    //   setIsLoaded,
-    //   setErr
-    // );
+    getPlayerTwoInfo().then(
+      (res) => {
+        setIsLoaded(true);
+        setPlayerTwoInfo(res.data);
+        console.log('DATA3: ', res.data);
+      },
+      (err) => {
+        setIsLoaded(true);
+        setErr(err);
+      }
+    );
+    getPlayerTwoStats().then(
+      (res) => {
+        setIsLoaded(true);
+        setPlayerTwoStats(res.data);
+        console.log('DATA4: ', res.data);
+      },
+      (err) => {
+        setIsLoaded(true);
+        setErr(err);
+      }
+    );
   }, []);
 
   if (err) {
